@@ -1,0 +1,17 @@
+.stats {
+  padding-top: rem($padding-sm);
+  padding-bottom: rem($padding-sm);
+  &__container {
+    @include flex-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    text-align: center;
+    padding: rem(20) rem(40);
+  }
+
+  &__header {
+    color: $primary-2;
+  }
+}

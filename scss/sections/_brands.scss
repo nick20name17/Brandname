@@ -1,0 +1,6 @@
+.brands {
+  padding: rem($padding-lg) 0;
+  &__container {
+    @include flex-between;
+  }
+}

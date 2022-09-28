@@ -1,0 +1,25 @@
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('../fonts/#{$url}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+@mixin header($fz, $ln, $color) {
+  font-size: rem($fz);
+  font-weight: 700;
+  line-height: $ln;
+  letter-spacing: 0.2px;
+  color: $color;
+}
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex-algn-center {
+  display: flex;
+  align-items: center;
+}

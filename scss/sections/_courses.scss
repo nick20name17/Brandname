@@ -1,0 +1,18 @@
+.courses {
+  padding-top: rem($padding-lg);
+
+  padding-bottom: rem(40);
+  background-color: $dark;
+  &__container {
+    @include flex-between;
+  }
+  &__content {
+    max-width: rem(381);
+  }
+  &__paragraph {
+    color: $light-1;
+  }
+  &__header {
+    color: $light-1;
+  }
+}

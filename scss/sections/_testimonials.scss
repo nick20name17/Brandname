@@ -1,0 +1,40 @@
+.testimonials {
+  padding: rem($padding-mid) 0;
+}
+
+.testimonial {
+  &__wrapper {
+    margin-top: rem(96);
+    @include flex-between;
+    flex-wrap: wrap;
+  }
+
+  &__img img {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__paragraph {
+    text-align: center;
+    max-width: rem(320);
+    margin-top: rem(30);
+  }
+}
+.testimonial {
+  @include flex-algn-center;
+  flex-direction: column;
+  text-align: center;
+  padding: rem(40) rem(60);
+
+  &__rate {
+    margin-top: rem(15);
+  }
+
+  &__name {
+    text-align: center;
+    margin-top: rem(15);
+  }
+
+  &__profession {
+    color: $second-text-color;
+  }
+}

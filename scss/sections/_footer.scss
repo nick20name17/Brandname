@@ -1,0 +1,40 @@
+.footer {
+  background-color: $dark;
+
+  &__container {
+    padding: rem(50) 0;
+  }
+  &__list {
+    align-items: flex-start;
+  }
+  &__nav {
+    @include flex-between;
+  }
+  &__nav ul > *:not(:last-child) {
+    margin-right: rem(30);
+  }
+  &__item ul li:not(:last-child) {
+    margin-bottom: rem(10);
+  }
+  &__item h4 {
+    margin-bottom: rem(20);
+    color: $light-1;
+  }
+
+  &__bottom {
+    background-color: $light-1;
+    padding: rem(24) 0;
+    .bottom__container {
+      @include flex-between;
+    }
+  }
+  &__label {
+    color: $second-text-color;
+  }
+}
+.social {
+  @include flex-algn-center;
+  &__item:not(:last-child) {
+    margin-right: rem(20);
+  }
+}

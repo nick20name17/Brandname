@@ -1,0 +1,53 @@
+.advice {
+  padding-top: rem($padding-mid);
+  padding-bottom: rem($padding-mid);
+  .advice__text > *:not(:last-child) {
+    margin-bottom: rem(10);
+  }
+
+  .advice__cards {
+    margin: rem(70) 0 rem(140) 0;
+    // @include flex-between;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(220), 1fr));
+    gap: rem(40);
+    grid-auto-flow: row;
+    height: 40vh;
+  }
+  .advice__paragraph {
+    color: inherit;
+    max-width: rem(500);
+  }
+}
+.card {
+  cursor: pointer;
+  padding: rem(35) rem(40);
+  max-width: rem(240);
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+  transition: $btn-transition;
+  & > *:not(:last-child) {
+    margin-bottom: rem(20);
+  }
+  &__line {
+    width: 30%;
+    height: 3px;
+    background-color: $primary-2;
+  }
+  &:nth-child(odd) {
+    align-self: flex-start;
+  }
+  &:nth-child(even) {
+    align-self: flex-end;
+  }
+  &:hover {
+    transition: $btn-transition;
+    box-shadow: none;
+    background-color: $primary-2;
+    color: $light-1;
+  }
+  &:hover &__line {
+    transition: $btn-transition;
+    background-color: $light-1;
+  }
+}

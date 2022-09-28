@@ -1,0 +1,54 @@
+.hero {
+  background-color: $primary-1;
+  padding: 0 rem($padding-lg);
+  padding-top: rem(200);
+  padding-bottom: rem($padding-lg);
+  border-radius: 10% 10% 100% 14% / 0% 0% 35% 16%;
+
+  &__content {
+    text-align: center;
+    max-width: rem(686);
+    margin: 0 auto;
+  }
+  &__content > *:not(:last-child) {
+    margin-bottom: rem(40);
+  }
+  &__label {
+    color: $primary-2;
+  }
+
+  &__paragraph {
+    color: $light-1;
+    font-weight: 400;
+  }
+  &__btn {
+    padding: rem(15) rem(25);
+    border-radius: $border-radius;
+    font-weight: 500;
+    font-size: rem(14);
+    min-width: rem(180);
+    transition: $btn-transition;
+
+    &--color {
+      background-color: $primary-2;
+      color: $light-1;
+
+      &:hover {
+        transition: $btn-transition;
+        background-color: $primary-3;
+      }
+    }
+    &--outline {
+      border: 1px solid $primary-2;
+      color: $primary-2;
+      &:hover {
+        transition: $btn-transition;
+        background-color: $primary-2;
+        color: $text-color;
+      }
+    }
+  }
+  &__btn:not(:last-child) {
+    margin-right: rem(10);
+  }
+}

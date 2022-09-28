@@ -1,0 +1,58 @@
+@function rem($px) {
+  $result: ($px / 16) + rem;
+  @return $result;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+.container {
+  max-width: rem($container-width);
+  margin: 0 auto;
+  padding: 0 rem(15);
+}
+
+.primary-header {
+  @include header(58, 138%, $light-1);
+}
+
+.secondary-header {
+  @include header(40, 125%, $text-color);
+}
+
+.third-header {
+  @include header(24, 133%, $text-color);
+}
+
+.fourth-header {
+  @include header(20, 158%, $text-color);
+}
+
+.fifth-header {
+  @include header(16, 158%, $text-color);
+}
+
+.sixth-header {
+  @include header(14, 171%, $primary-2);
+}
+
+.paragraph {
+  font-size: rem(14);
+  line-height: 153%;
+  letter-spacing: 0.2px;
+  color: $second-text-color;
+}
+
+.link {
+  color: $light-1;
+  font-size: rem(14);
+  line-height: 171%;
+  letter-spacing: 0.2px;
+  font-weight: 700;
+  transition: $link-transition;
+
+  &:hover {
+    transition: $link-transition;
+    color: $primary-2;
+  }
+}

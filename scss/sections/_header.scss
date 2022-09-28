@@ -1,0 +1,55 @@
+.header {
+  padding: rem(30) 0;
+  background-color: $primary-1;
+  &__container {
+    @include flex-between;
+  }
+  &__left {
+    @include flex-algn-center;
+  }
+  &__nav {
+    margin-left: rem(80);
+  }
+  &__buttons > a:not(:last-child) {
+    margin-right: rem(45);
+  }
+
+  &__btn--primary {
+    background-color: $primary-2;
+    padding: 15px 50px 15px 25px;
+    border-radius: $border-radius;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $light-1;
+    position: relative;
+    transition: $btn-transition;
+    &::after {
+      content: '';
+      background: url(/images/header/right-arrow.svg);
+
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      width: 12px;
+      height: 10px;
+    }
+    &:hover {
+      transition: $btn-transition;
+      background-color: $primary-3;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    @include flex-algn-center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: rem(20);
+  }
+
+  &__link {
+    color: $light-1;
+  }
+}

@@ -1,0 +1,39 @@
+.newsletter {
+  padding: rem($padding-lg) 0;
+
+  &__container {
+    @include flex-algn-center;
+    flex-direction: column;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}
+
+.form {
+  margin-top: rem(80);
+  @include flex-algn-center;
+  &__email {
+    color: $text-color;
+    padding: rem(15) rem(20);
+    border-radius: $border-radius;
+    background-color: #f9f9f9;
+    min-width: rem(560);
+    &::placeholder {
+      color: $second-text-color;
+    }
+  }
+
+  &__btn {
+    background-color: $primary-2;
+    padding: rem(15) rem(20);
+    color: $light-1;
+    border-radius: 0px $border-radius $border-radius 0px;
+    transition: $btn-transition;
+    &:hover {
+      transition: $btn-transition;
+      background-color: $primary-3;
+    }
+  }
+}
