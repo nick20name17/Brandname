@@ -502,6 +502,11 @@ body {
   margin-right: 1.25rem;
 }
 
+@media (max-width: 909.98px) {
+  .testimonial__wrapper {
+    justify-content: center;
+  }
+}
 @media (max-width: 767.98px) {
   .header__container {
     justify-content: center;
@@ -545,6 +550,13 @@ body {
   }
   .brands__container > * {
     padding: 1.5625rem;
+  }
+  .testimonials {
+    padding: 5rem 0;
+    justify-content: center;
+  }
+  .testimonial {
+    padding: 1.25rem 2.5rem;
   }
 }
 @media (max-width: 539.98px) {
