@@ -18,6 +18,11 @@
   .hero__btn {
     min-width: rem(140);
   }
+
+  .features {
+    padding-top: rem($padding-mid);
+    padding-bottom: rem($padding-mid);
+  }
 }
 
 @media (max-width: 539.98px) {
@@ -43,5 +48,9 @@
   }
   .hero__content > *:not(:last-child) {
     margin-bottom: rem(20);
+  }
+
+  .stats__container {
+    flex-direction: column;
   }
 }

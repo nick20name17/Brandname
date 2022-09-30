@@ -224,7 +224,6 @@ body {
 .features__video {
   max-width: 31.75rem;
   position: relative;
-  display: block;
   border-radius: 10px;
   margin-right: 15%;
 }
@@ -284,7 +283,7 @@ body {
   padding: 1.25rem 2.5rem;
 }
 .stats__header {
-  color: #ff6551;
+  color: #ff6551 !important;
 }
 
 .advice {
@@ -518,6 +517,10 @@ body {
   .hero__btn {
     min-width: 8.75rem;
   }
+  .features {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
 }
 @media (max-width: 539.98px) {
   .header__left {
@@ -545,5 +548,8 @@ body {
   }
   .hero__content > *:not(:last-child) {
     margin-bottom: 1.25rem;
+  }
+  .stats__container {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=main.css.map */
