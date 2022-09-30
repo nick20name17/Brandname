@@ -6,6 +6,9 @@
   &__container {
     @include flex-between;
   }
+  &__img img {
+    max-width: 100%;
+  }
   &__content {
     max-width: rem(381);
   }

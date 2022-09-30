@@ -28,6 +28,14 @@
     padding-top: rem($padding-sm);
     padding-bottom: rem($padding-sm);
   }
+
+  .courses {
+    padding-top: rem($padding-sm);
+    padding-bottom: rem(20);
+  }
+  .courses__container {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 539.98px) {

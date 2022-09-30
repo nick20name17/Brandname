@@ -349,6 +349,9 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.courses__img img {
+  max-width: 100%;
+}
 .courses__content {
   max-width: 23.8125rem;
 }
@@ -525,6 +528,13 @@ body {
   .advice {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+  .courses {
+    padding-top: 5rem;
+    padding-bottom: 1.25rem;
+  }
+  .courses__container {
+    flex-direction: column;
   }
 }
 @media (max-width: 539.98px) {
