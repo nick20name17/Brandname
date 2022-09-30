@@ -572,6 +572,9 @@ body {
     display: block;
     width: 70%;
   }
+  .form {
+    margin-top: 2.5rem;
+  }
   .bottom__container {
     flex-wrap: wrap;
   }
