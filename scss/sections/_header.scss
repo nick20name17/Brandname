@@ -3,9 +3,11 @@
   background-color: $primary-1;
   &__container {
     @include flex-between;
+    flex-wrap: wrap;
   }
   &__left {
     @include flex-algn-center;
+    flex-wrap: wrap;
   }
   &__nav {
     margin-left: rem(80);
@@ -24,7 +26,7 @@
     position: relative;
     transition: $btn-transition;
     &::after {
-      content: '';
+      content: "";
       background: url(/images/header/right-arrow.svg);
 
       position: absolute;

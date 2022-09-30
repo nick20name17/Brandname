@@ -3,6 +3,8 @@
 
   &__container {
     @include flex-algn-center;
+    align-items: center;
+
     flex-direction: column;
   }
 

@@ -1,4 +1,4 @@
-@import 'normalize.css';
+@import "normalize.css";
 @font-face {
   font-family: "Inter";
   src: url("../fonts/../fonts/InterRegular.woff2") format("woff2");
@@ -114,10 +114,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .header__left {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 }
 .header__nav {
   margin-left: 5rem;
@@ -151,7 +152,6 @@ body {
 
 .nav__list {
   display: flex;
-  align-items: center;
 }
 .nav__item:not(:last-child) {
   margin-right: 1.25rem;
@@ -257,7 +257,6 @@ body {
 }
 .features__btn {
   display: flex;
-  align-items: center;
   transition: all 0.3s ease-in-out;
 }
 .features__link {
@@ -392,7 +391,6 @@ body {
 
 .testimonial {
   display: flex;
-  align-items: center;
   flex-direction: column;
   text-align: center;
   padding: 2.5rem 3.75rem;
@@ -423,7 +421,6 @@ body {
 .form {
   margin-top: 5rem;
   display: flex;
-  align-items: center;
 }
 .form__email {
   color: #252b42;
@@ -492,8 +489,25 @@ body {
 
 .social {
   display: flex;
-  align-items: center;
 }
 .social__item:not(:last-child) {
   margin-right: 1.25rem;
+}
+
+@media (max-width: 767.98px) {
+  .header__container {
+    justify-content: center;
+  }
+  .header__left {
+    margin-bottom: 1.875rem;
+  }
+}
+@media (max-width: 539.98px) {
+  .header__left {
+    justify-content: center;
+  }
+  .header__nav {
+    margin-top: 1.875rem;
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=main.css.map */

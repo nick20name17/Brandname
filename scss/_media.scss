@@ -1,0 +1,18 @@
+@media (max-width: 767.98px) {
+  .header__container {
+    justify-content: center;
+  }
+  .header__left {
+    margin-bottom: rem(30);
+  }
+}
+
+@media (max-width: 539.98px) {
+  .header__left {
+    justify-content: center;
+  }
+  .header__nav {
+    margin-top: rem(30);
+    margin-left: 0;
+  }
+}
