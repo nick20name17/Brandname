@@ -2,5 +2,9 @@
   padding: rem($padding-lg) 0;
   &__container {
     @include flex-between;
+    flex-wrap: wrap;
+  }
+  &__container > * {
+    padding: rem(10);
   }
 }

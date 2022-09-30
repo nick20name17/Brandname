@@ -369,6 +369,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+.brands__container > * {
+  padding: 0.625rem;
 }
 
 .testimonials {
@@ -536,6 +540,12 @@ body {
   .courses__container {
     flex-direction: column;
   }
+  .brands {
+    padding: 5rem 0;
+  }
+  .brands__container > * {
+    padding: 1.5625rem;
+  }
 }
 @media (max-width: 539.98px) {
   .header__left {
@@ -565,6 +575,9 @@ body {
     margin-bottom: 1.25rem;
   }
   .stats__container {
+    flex-direction: column;
+  }
+  .brands__container {
     flex-direction: column;
   }
 }/*# sourceMappingURL=main.css.map */

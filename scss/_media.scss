@@ -36,6 +36,13 @@
   .courses__container {
     flex-direction: column;
   }
+
+  .brands {
+    padding: rem($padding-sm) 0;
+  }
+  .brands__container > * {
+    padding: rem(25);
+  }
 }
 
 @media (max-width: 539.98px) {
@@ -64,6 +71,10 @@
   }
 
   .stats__container {
+    flex-direction: column;
+  }
+
+  .brands__container {
     flex-direction: column;
   }
 }
