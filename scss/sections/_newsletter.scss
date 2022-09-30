@@ -21,7 +21,7 @@
     padding: rem(15) rem(20);
     border-radius: $border-radius;
     background-color: #f9f9f9;
-    min-width: rem(560);
+    width: rem(560);
     &::placeholder {
       color: $second-text-color;
     }
