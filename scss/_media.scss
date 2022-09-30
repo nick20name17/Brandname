@@ -23,6 +23,11 @@
     padding-top: rem($padding-mid);
     padding-bottom: rem($padding-mid);
   }
+
+  .advice {
+    padding-top: rem($padding-sm);
+    padding-bottom: rem($padding-sm);
+  }
 }
 
 @media (max-width: 539.98px) {

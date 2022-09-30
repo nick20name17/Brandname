@@ -297,6 +297,7 @@ body {
   margin: 4.375rem 0 8.75rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
+  place-items: center;
   gap: 2.5rem;
   grid-auto-flow: row;
   height: 40vh;
@@ -520,6 +521,10 @@ body {
   .features {
     padding-top: 7rem;
     padding-bottom: 7rem;
+  }
+  .advice {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 @media (max-width: 539.98px) {
