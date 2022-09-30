@@ -565,6 +565,21 @@ body {
     display: block;
     width: 70%;
   }
+  .bottom__container {
+    flex-wrap: wrap;
+  }
+  .social {
+    margin: 0 auto;
+  }
+  .footer__list {
+    flex-wrap: wrap;
+  }
+  .footer__item {
+    padding: 1.25rem;
+  }
+  .footer__item h4 {
+    margin-bottom: 0.9375rem;
+  }
 }
 @media (max-width: 539.98px) {
   .header__left {

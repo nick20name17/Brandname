@@ -63,8 +63,24 @@
   }
   .form__email {
     display: block;
-
     width: 70%;
+  }
+
+  .bottom__container {
+    flex-wrap: wrap;
+  }
+  .social {
+    margin: 0 auto;
+  }
+
+  .footer__list {
+    flex-wrap: wrap;
+  }
+  .footer__item {
+    padding: rem(20);
+  }
+  .footer__item h4 {
+    margin-bottom: rem(15);
   }
 }
 
