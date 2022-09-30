@@ -6,12 +6,11 @@
   }
 
   &__video {
-    max-width: rem(508);
     position: relative;
     border-radius: 10px;
-    margin-right: 15%;
+    margin-right: 10vh;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       z-index: 10;
       width: 50px;
@@ -19,7 +18,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: url(/images/features/play.svg) no-repeat center $primary-2;
+      background: url(/images/features/play.svg) no-repeat center
+        $primary-2;
       border-radius: 50%;
       cursor: pointer;
     }
@@ -32,7 +32,7 @@
     position: relative;
   }
   &__header::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 30%;
     height: 7px;
