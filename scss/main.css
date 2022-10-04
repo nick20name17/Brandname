@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "normalize.css";
 @font-face {
   font-family: "Inter";
@@ -109,6 +110,7 @@ body {
 .header {
   padding: 1.875rem 0;
   background-color: #2435a1;
+  position: relative;
 }
 .header__container {
   display: flex;
@@ -116,15 +118,14 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.header__left {
-  display: flex;
-  flex-wrap: wrap;
+.header__list {
+  align-items: center;
 }
 .header__nav {
-  margin-left: 5rem;
+  display: flex;
 }
-.header__buttons > a:not(:last-child) {
-  margin-right: 2.8125rem;
+.header__buttons > a {
+  margin-left: 2.8125rem;
 }
 .header__btn--primary {
   background-color: #ff6551;
@@ -160,6 +161,85 @@ body {
   color: #fff;
 }
 
+#mobile-menu {
+  display: none;
+}
+
+label[for=mobile-menu] {
+  cursor: pointer;
+  font-size: 0.875rem;
+  background-color: #ff6551;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 5px;
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  z-index: 100;
+  display: none;
+}
+
+label[for=mobile-menu]::after {
+  content: "☰";
+}
+
+@media (max-width: 767.98px) {
+  label[for=mobile-menu] {
+    display: block;
+  }
+  .header__container {
+    flex-direction: column;
+    background-color: #e74040;
+    padding: 2.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+  }
+  .header__nav {
+    display: none;
+    transition: all 0.3s ease-in;
+  }
+  .header__list {
+    flex-direction: column;
+    margin-top: 2.5rem;
+  }
+  .header__list .nav__link {
+    font-size: 2rem;
+  }
+  .header__list .nav__link {
+    margin-bottom: 0.625rem;
+  }
+  .header__list .nav__item:not(:last-child) {
+    margin-right: 0;
+  }
+  .header__buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .header__buttons > a:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .header__buttons > a {
+    display: block;
+    min-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #mobile-menu:checked ~ .header__nav {
+    display: block;
+    min-height: 100vh;
+    transition: all 0.3s ease-in;
+  }
+  #mobile-menu:checked ~ label[for=mobile-menu]::after {
+    content: "X";
+  }
+  body:has(#mobile-menu:checked) {
+    overflow: hidden;
+  }
+}
 .hero {
   background-color: #2435a1;
   padding: 0 10rem;
