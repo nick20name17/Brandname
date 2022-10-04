@@ -189,17 +189,15 @@ label[for=mobile-menu]::after {
   }
   .header__container {
     flex-direction: column;
-    background-color: #e74040;
     padding: 2.5rem;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 15;
   }
   .header__nav {
     display: none;
-    transition: all 0.3s ease-in;
   }
   .header__list {
     flex-direction: column;
@@ -230,14 +228,15 @@ label[for=mobile-menu]::after {
   }
   #mobile-menu:checked ~ .header__nav {
     display: block;
-    min-height: 100vh;
-    transition: all 0.3s ease-in;
   }
   #mobile-menu:checked ~ label[for=mobile-menu]::after {
     content: "X";
   }
   body:has(#mobile-menu:checked) {
     overflow: hidden;
+  }
+  .header__container:has(#mobile-menu:checked) {
+    background-color: #e74040;
   }
 }
 .hero {
@@ -541,7 +540,8 @@ label[for=mobile-menu]::after {
   background-color: #26335d;
 }
 .footer__container {
-  padding: 3.125rem 0;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
 }
 .footer__list {
   align-items: flex-start;
