@@ -2,7 +2,8 @@
   background-color: $dark;
 
   &__container {
-    padding: rem(50) 0;
+    padding-top: rem(50);
+    padding-bottom: rem(50);
   }
   &__list {
     align-items: flex-start;

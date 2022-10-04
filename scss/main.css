@@ -541,7 +541,8 @@ label[for=mobile-menu]::after {
   background-color: #26335d;
 }
 .footer__container {
-  padding: 3.125rem 0;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
 }
 .footer__list {
   align-items: flex-start;
