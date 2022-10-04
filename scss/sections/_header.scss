@@ -81,16 +81,17 @@ label[for='mobile-menu']::after {
   }
   .header__container {
     flex-direction: column;
-    background-color: $primary-3;
     padding: rem(40);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 15;
+    transition: all 0.3s ease-in;
   }
   .header__nav {
-    display: none;
+    // display: none;
+    margin-right: -1000px;
     transition: all 0.3s ease-in;
   }
   .header__list {
@@ -121,8 +122,8 @@ label[for='mobile-menu']::after {
     text-align: center;
   }
   #mobile-menu:checked ~ .header__nav {
-    display: block;
-    min-height: 100vh;
+    // display: block;
+    margin-right: 0;
     transition: all 0.3s ease-in;
   }
   #mobile-menu:checked ~ label[for='mobile-menu']::after {
@@ -130,5 +131,9 @@ label[for='mobile-menu']::after {
   }
   body:has(#mobile-menu:checked) {
     overflow: hidden;
+  }
+  .header__container:has(#mobile-menu:checked) {
+    background-color: $primary-3;
+    transition: all 0.3s ease-in;
   }
 }
