@@ -3,18 +3,11 @@
     justify-content: center;
   }
   .courses {
-    margin-top: 80px;
+    margin-top: rem(80);
   }
 }
 
 @media (max-width: 767.98px) {
-  .header__container {
-    justify-content: center;
-  }
-  .header__left {
-    margin-bottom: rem(30);
-  }
-
   .primary-header {
     @include header(48, 138%, $light-1);
   }
@@ -111,14 +104,6 @@
 }
 
 @media (max-width: 539.98px) {
-  .header__left {
-    justify-content: center;
-  }
-  .header__nav {
-    margin-top: rem(30);
-    margin-left: 0;
-  }
-
   .hero__paragraph {
     font-size: rem(16);
   }
