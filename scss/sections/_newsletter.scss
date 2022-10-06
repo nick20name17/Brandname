@@ -39,3 +39,16 @@
     }
   }
 }
+
+@media (max-width: 767.98px) {
+  .newsletter {
+    padding: rem($padding-sm) 0;
+  }
+  .form__email {
+    display: block;
+    width: 70%;
+  }
+  .form {
+    margin-top: rem(40);
+  }
+}

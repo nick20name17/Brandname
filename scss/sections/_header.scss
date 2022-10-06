@@ -2,6 +2,10 @@
   padding: rem(30) 0;
   background-color: $primary-1;
   position: relative;
+  position: sticky;
+  box-shadow: 0px 5px 20px $primary-1;
+  top: 0;
+  z-index: 1000;
   &__container {
     @include flex-between;
     flex-wrap: wrap;
@@ -15,33 +19,31 @@
   &__buttons > a {
     margin-left: rem(45);
   }
-
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
   &__btn--primary {
     background-color: $primary-2;
-    padding: 15px 50px 15px 25px;
+    padding: 15px 25px;
     border-radius: $border-radius;
     text-transform: uppercase;
     font-weight: 700;
     color: $light-1;
     position: relative;
     transition: $btn-transition;
-    &::after {
-      content: '';
-      background: url(/images/header/right-arrow.svg);
-
-      position: absolute;
-      top: 20px;
-      right: 24px;
-      width: 12px;
-      height: 10px;
-    }
+    display: flex;
+    align-items: center;
     &:hover {
       transition: $btn-transition;
       background-color: $primary-3;
     }
+    p {
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
   }
 }
-
 .nav {
   &__list {
     @include flex-algn-center;
@@ -61,23 +63,67 @@
 }
 label[for='mobile-menu'] {
   cursor: pointer;
-  font-size: rem(14);
   background-color: $primary-2;
-  padding: rem(10) rem(15);
+  padding: rem(20) rem(15);
   border-radius: 5px;
   color: $light-1;
   position: absolute;
   right: 10px;
-  top: 30px;
+  top: 32px;
   z-index: 100;
+  transition: $btn-transition;
   display: none;
+  align-items: center;
+  justify-content: center;
 }
-label[for='mobile-menu']::after {
-  content: '☰';
+label[for='mobile-menu']:hover {
+  background-color: $primary-3;
+  transition: $btn-transition;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  height: 3px;
+  width: 30px;
+  position: absolute;
+  transition: $btn-transition;
+  border-radius: 2px;
+}
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+#mobile-menu:checked + label[for='mobile-menu'] .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(135deg);
+  transition: $btn-transition;
+}
+
+#mobile-menu:checked + label[for='mobile-menu'] .menu-button {
+  background: rgba(255, 255, 255, 0);
+  transition: $btn-transition;
+}
+
+#mobile-menu:checked + label[for='mobile-menu'] .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-135deg);
+  transition: $btn-transition;
 }
 @media (max-width: 767.98px) {
   label[for='mobile-menu'] {
-    display: block;
+    display: flex;
+    min-width: rem(45);
+  }
+  .header {
+    padding: rem(50) 0;
   }
   .header__container {
     flex-direction: column;
@@ -87,12 +133,9 @@ label[for='mobile-menu']::after {
     left: 0;
     width: 100%;
     z-index: 15;
-    // transition: all 0.3s ease-in;
   }
   .header__nav {
     display: none;
-    // margin-right: -1000px;
-    // transition: all 0.3s ease-in;
   }
   .header__list {
     flex-direction: column;
@@ -116,24 +159,15 @@ label[for='mobile-menu']::after {
     margin-bottom: rem(16);
   }
   .header__buttons > a {
-    display: block;
-    min-width: 100%;
     margin: 0 auto;
     text-align: center;
+    font-size: rem(20);
   }
   #mobile-menu:checked ~ .header__nav {
     display: block;
-    // margin-right: 0;
-    // transition: all 0.3s ease-in;
   }
-  #mobile-menu:checked ~ label[for='mobile-menu']::after {
-    content: 'X';
-  }
-  body:has(#mobile-menu:checked) {
-    overflow: hidden;
-  }
+
   .header__container:has(#mobile-menu:checked) {
-    background-color: $primary-3;
-    // transition: all 0.3s ease-in;
+    background-color: $dark;
   }
 }
