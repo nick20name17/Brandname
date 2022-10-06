@@ -130,6 +130,8 @@ body {
 }
 .header__buttons > a {
   margin-left: 2.8125rem;
+  display: flex;
+  align-items: center;
 }
 .header__buttons {
   display: flex;
@@ -144,8 +146,6 @@ body {
   color: #fff;
   position: relative;
   transition: all 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
 }
 .header__btn--primary:hover {
   transition: all 0.3s ease-in-out;
@@ -199,18 +199,19 @@ label[for=mobile-menu]:hover {
   height: 3px;
   width: 30px;
   position: absolute;
-  transition: all 0.3s ease-in-out;
   border-radius: 2px;
 }
 
 .menu-button::before {
   content: "";
   margin-top: -8px;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-button::after {
   content: "";
   margin-top: 8px;
+  transition: all 0.3s ease-in-out;
 }
 
 #mobile-menu:checked + label[for=mobile-menu] .menu-button::before {
@@ -221,7 +222,7 @@ label[for=mobile-menu]:hover {
 
 #mobile-menu:checked + label[for=mobile-menu] .menu-button {
   background: rgba(255, 255, 255, 0);
-  transition: all 0.3s ease-in-out;
+  transition: background ease-in;
 }
 
 #mobile-menu:checked + label[for=mobile-menu] .menu-button::after {
@@ -274,7 +275,6 @@ label[for=mobile-menu]:hover {
   .header__buttons > a {
     margin: 0 auto;
     text-align: center;
-    font-size: 1.25rem;
   }
   #mobile-menu:checked ~ .header__nav {
     display: block;
@@ -385,8 +385,10 @@ label[for=mobile-menu]:hover {
 }
 .features__video {
   position: relative;
-  margin-right: 5vw;
+  margin-right: 4vw;
   overflow: hidden;
+  width: 31.25rem;
+  height: 22.3125rem;
 }
 .features .video {
   width: 100%;
@@ -424,6 +426,9 @@ label[for=mobile-menu]:hover {
 .features__paragraph {
   max-width: 21.25rem;
 }
+.features__header {
+  max-width: 16.25rem;
+}
 
 @media (max-width: 909.98px) {
   .hero {
@@ -440,6 +445,7 @@ label[for=mobile-menu]:hover {
   }
   .features__video {
     margin-top: 1.875rem;
+    margin-right: 0;
   }
 }
 .stats {
@@ -594,12 +600,14 @@ label[for=mobile-menu]:hover {
   padding: 0.625rem;
 }
 
+@media (max-width: 1049.98px) {
+  .brands__container > * {
+    padding: 1.5625rem;
+  }
+}
 @media (max-width: 767.98px) {
   .brands {
     padding: 5rem 0;
-  }
-  .brands__container > * {
-    padding: 1.5625rem;
   }
 }
 @media (max-width: 539.98px) {
@@ -789,5 +797,8 @@ label[for=mobile-menu]:hover {
 @media (max-width: 539.98px) {
   .footer__label {
     margin-bottom: 1rem;
+  }
+  .footer__list {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=main.css.map */

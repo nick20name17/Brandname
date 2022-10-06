@@ -8,13 +8,14 @@
     padding: rem(10);
   }
 }
-
+@media (max-width: 1049.98px) {
+  .brands__container > * {
+    padding: rem(25);
+  }
+}
 @media (max-width: 767.98px) {
   .brands {
     padding: rem($padding-sm) 0;
-  }
-  .brands__container > * {
-    padding: rem(25);
   }
 }
 

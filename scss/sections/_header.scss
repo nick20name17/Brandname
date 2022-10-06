@@ -18,6 +18,8 @@
   }
   &__buttons > a {
     margin-left: rem(45);
+    display: flex;
+    align-items: center;
   }
   &__buttons {
     display: flex;
@@ -32,8 +34,7 @@
     color: $light-1;
     position: relative;
     transition: $btn-transition;
-    display: flex;
-    align-items: center;
+
     &:hover {
       transition: $btn-transition;
       background-color: $primary-3;
@@ -85,21 +86,22 @@ label[for='mobile-menu']:hover {
 .menu-button::before,
 .menu-button::after {
   display: block;
-  background-color: #fff;
+  background-color: $light-1;
   height: 3px;
   width: 30px;
   position: absolute;
-  transition: $btn-transition;
   border-radius: 2px;
 }
 .menu-button::before {
   content: '';
   margin-top: -8px;
+  transition: $btn-transition;
 }
 
 .menu-button::after {
   content: '';
   margin-top: 8px;
+  transition: $btn-transition;
 }
 #mobile-menu:checked + label[for='mobile-menu'] .menu-button::before {
   margin-top: 0px;
@@ -109,7 +111,7 @@ label[for='mobile-menu']:hover {
 
 #mobile-menu:checked + label[for='mobile-menu'] .menu-button {
   background: rgba(255, 255, 255, 0);
-  transition: $btn-transition;
+  transition: background ease-in;
 }
 
 #mobile-menu:checked + label[for='mobile-menu'] .menu-button::after {
@@ -117,6 +119,7 @@ label[for='mobile-menu']:hover {
   transform: rotate(-135deg);
   transition: $btn-transition;
 }
+
 @media (max-width: 767.98px) {
   label[for='mobile-menu'] {
     display: flex;
@@ -161,7 +164,6 @@ label[for='mobile-menu']:hover {
   .header__buttons > a {
     margin: 0 auto;
     text-align: center;
-    font-size: rem(20);
   }
   #mobile-menu:checked ~ .header__nav {
     display: block;

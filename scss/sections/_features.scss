@@ -7,8 +7,10 @@
   }
   &__video {
     position: relative;
-    margin-right: 5vw;
+    margin-right: 4vw;
     overflow: hidden;
+    width: rem(500);
+    height: rem(357);
   }
   .video {
     width: 100%;
@@ -45,6 +47,9 @@
   &__paragraph {
     max-width: rem(340);
   }
+  &__header {
+    max-width: rem(260);
+  }
 }
 
 @media (max-width: 909.98px) {
@@ -62,5 +67,6 @@
   }
   .features__video {
     margin-top: rem(30);
+    margin-right: 0;
   }
 }

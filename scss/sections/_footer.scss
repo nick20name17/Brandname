@@ -70,4 +70,7 @@
   .footer__label {
     margin-bottom: rem(16);
   }
+  .footer__list {
+    flex-direction: column;
+  }
 }
