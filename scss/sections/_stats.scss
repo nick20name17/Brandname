@@ -12,6 +12,20 @@
   }
 
   &__header {
-    color: $primary-2 !important;
+    color: $primary-2;
+    font-size: rem(58);
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .stats {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 539.98px) {
+  .stats__container {
+    flex-direction: column;
   }
 }

@@ -53,3 +53,36 @@
     margin-right: rem(10);
   }
 }
+
+@media (max-width: 767.98px) {
+  .hero {
+    padding: 0 rem($padding-sm);
+    padding-top: rem(100);
+    padding-bottom: rem($padding-sm);
+    border-radius: 0;
+  }
+  .hero__btn {
+    min-width: rem(140);
+  }
+  .primary-header {
+    @include header(48, 138%, $light-1);
+  }
+}
+
+@media (max-width: 539.98px) {
+  .hero__btn:not(:last-child) {
+    margin-right: 0;
+  }
+  .hero__btn {
+    min-width: 100%;
+  }
+  .hero__content > *:not(:last-child) {
+    margin-bottom: rem(20);
+  }
+  .hero__paragraph {
+    font-size: rem(16);
+  }
+  .primary-header {
+    @include header(24, 138%, $light-1);
+  }
+}
